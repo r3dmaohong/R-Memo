@@ -1,6 +1,6 @@
 # 1. Extracting Tables from PDF
 
-Extracting Tables from PDF using "tabulizer".
+####Extracting Tables from PDF using "tabulizer".
 
 ```
 library(tabulizer)
