@@ -1,7 +1,7 @@
 # Reference :
 # http://www.troywalters.com/blog/2016/11/29/extracting-tables-pdfs-tabulizer-package/
 
-## If facing problem while intalling tabulizer...
+## If facing problem while installing tabulizer...
 #library(ghit)
 #http://stackoverflow.com/questions/39132202/trouble-installing-tabulizer-package-for-r
 #ghit::install_github(c("leeper/tabulizerjars", "leeper/tabulizer"), INSTALL_opts = "--no-multiarch", dependencies = c("Depends", "Imports"))
