@@ -1,7 +1,7 @@
 # 4. Simple way to scrape website by rvest
 
 ####Contains 
- - scrape web page with table
+ - scrape web page with table in it
  - Scrape mutiple web pages
  - Using "str_trim" to clean up strings
 
