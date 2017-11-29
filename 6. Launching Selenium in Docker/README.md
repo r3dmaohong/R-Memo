@@ -1,4 +1,4 @@
-# 1. Launching Selenium in Docker
+# 6. Launching Selenium in Docker
 
 
 ####Launching Selenium in Docker.
