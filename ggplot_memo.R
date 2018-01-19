@@ -1,4 +1,4 @@
-library(ggplot2)
+﻿library(ggplot2)
 
 SEX <- c("MALE", "FEMALE")
 GRADE <- c("BAD", "GOOD", "EXCELLENT")
@@ -9,7 +9,7 @@ dat <- data.frame(SEX = SEX[floor(runif(1000, 1, 3))],
                   stringsAsFactors = FALSE
                   )
 
-#
+# bar chart
 ggplot(data=dat[dat$SEX=="FEMALE",], aes(x=GRADE)) + 
   geom_bar(fill=c(I("#D87093"))) + 
   geom_text(stat='count',aes(label=..count..),vjust=-1) + 
@@ -24,6 +24,24 @@ ggplot(data=dat[dat$SEX=="FEMALE",], aes(x=GRADE)) +
         plot.title = element_text(hjust = 0.5,size=20, face="bold"),#, family = "微軟粗"),
         plot.margin = unit(c(1,1,1,1), "cm")
   )
+
+# bar chart 2 (with y col)
+library(dplyr)
+tmp <- data.frame('TYPE' = c("A", "B"), 'VALUE' = c(10,20))
+ggplot(data=tmp, aes(x=TYPE, y=VALUE)) + 
+  geom_bar(stat = "identity", fill=c(I("#00FFFF"))) + 
+  #geom_text(stat='count',aes(label=..count..),vjust=-1) + 
+  ylab("YLAB") +
+  ggtitle("TITLE")+
+  theme_minimal() +
+  #theme(panel.background = element_rect(fill = "white", colour = "grey50")) + 
+  theme(axis.text.x = element_text(size=14, family = "微軟細"),
+        axis.text.y = element_text(size=14, family = "微軟細"),  
+        axis.title.x = element_text(size=14, face="bold", family = "微軟粗"),
+        axis.title.y = element_text(size=14, face="bold", family = "微軟粗"),
+        plot.title = element_text(hjust = 0.5,size=20, face="bold", family = "微軟粗"),
+        plot.margin = unit(c(1,1,1,1), "cm")
+  )# + coord_flip()
 
 ## different colors with different bars
 ggplot(data=dat, aes(x=SEX)) + 
